@@ -30,6 +30,7 @@ app.get('/webhook/', function (req, res) {
 // to post data
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
+	// console.log(messageing_events);
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
@@ -52,8 +53,8 @@ app.post('/webhook/', function (req, res) {
 
 
 // recommended to inject access tokens as environmental variables, e.g.
-const token = process.env.PAGE_ACCESS_TOKEN
-// const token = "EAAZAAK1tertABAFkfZBSwvPfOVsZCPZCJKSBqZAc3IKDkpA7ZBA4FzjM2cc0k6RZCpKBf3jli9w4ll8XbmgcIaahWizitNGT8TAG6dz4qZCHIr0svpvXeWf4wqXZBhgVGDolQtkqPQKber07zr1HhZAWSMMde4oC5xwqtyZBTjzMMYvmQZDZD"
+// const token = process.env.PAGE_ACCESS_TOKEN
+const token = "EAAZAAK1tertABAFkfZBSwvPfOVsZCPZCJKSBqZAc3IKDkpA7ZBA4FzjM2cc0k6RZCpKBf3jli9w4ll8XbmgcIaahWizitNGT8TAG6dz4qZCHIr0svpvXeWf4wqXZBhgVGDolQtkqPQKber07zr1HhZAWSMMde4oC5xwqtyZBTjzMMYvmQZDZD"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
