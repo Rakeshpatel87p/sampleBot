@@ -14,6 +14,27 @@ app.use(bodyParser.urlencoded({extended: false}))
 // parse application/json
 app.use(bodyParser.json())
 
+// Wit quickstart
+let Wit = null;
+let interactive = null;
+try {
+    // if running from repo
+    Wit = require('../').Wit;
+    interactive = require('../').interactive;
+} catch (e) {
+    Wit = require('botSample').Wit;
+    interactive = require('node-wit').interactive;
+}
+
+// Wit quckstart - Does this conflict?
+// const accessToken = (() => {
+//     if (process.argv.length !== 3) {
+//         console.log('usage: node examples/quickstart.js ZEGOKEEGU5FC7QML32OLBHCCS3PQHYUU');
+//         process.exit(1);
+//     }
+//     return process.argv[2];
+// })();
+
 // index
 app.get('/', function (req, res) {
 	res.send('hello world i am a secret bot')
@@ -124,6 +145,9 @@ function sendGenericMessage(sender) {
 		}
 	})
 }
+// From Wit quickstart
+const client = new Wit({ accessToken, actions });
+interactive(client);
 
 // spin spin sugar
 app.listen(app.get('port'), function() {
