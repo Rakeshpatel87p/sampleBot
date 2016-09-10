@@ -17,14 +17,14 @@ app.use(bodyParser.json())
 // Wit quickstart
 const Wit = null;
 const interactive = null;
-// try {
-//     // if running from repo
-//     Wit = require('../').Wit;
-//     interactive = require('../').interactive;
-// } catch (e) {
-//     Wit = require('botSample').Wit;
-//     interactive = require('node-wit').interactive;
-// }
+try {
+    // if running from repo
+    Wit = require('../').Wit;
+    interactive = require('../').interactive;
+} catch (e) {
+    Wit = require('botSample').Wit;
+    interactive = require('node-wit').interactive;
+}
 
 // Wit quckstart - Does this conflict?
 // const accessToken = (() => {
