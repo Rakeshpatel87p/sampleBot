@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 // Wit quickstart
 const Wit = null;
 const interactive = null;
+// Heroku doesn't like - cross-browser reference
 // try {
 //     // if running from repo
 //     Wit = require('../').Wit;
@@ -28,13 +29,14 @@ const interactive = null;
 // }
 
 // Wit quckstart - Does this conflict?
-const accessToken = (() => {
-    if (process.argv.length !== 3) {
-        console.log('usage: node examples/quickstart.js ZEGOKEEGU5FC7QML32OLBHCCS3PQHYUU');
-        process.exit(1);
-    }
-    return process.argv[2];
-})();
+// Heroku doesn't like
+// const accessToken = (() => {
+//     if (process.argv.length !== 3) {
+//         console.log('usage: node examples/quickstart.js ZEGOKEEGU5FC7QML32OLBHCCS3PQHYUU');
+//         process.exit(1);
+//     }
+//     return process.argv[2];
+// })();
 
 // index
 app.get('/', function (req, res) {
@@ -147,8 +149,8 @@ function sendGenericMessage(sender) {
 	})
 }
 // From Wit quickstart
-// const client = new Wit({ accessToken, actions });
-// interactive(client);
+const client = new Wit({ accessToken, actions });
+interactive(client);
 
 // spin spin sugar
 app.listen(app.get('port'), function() {
