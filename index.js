@@ -22,19 +22,19 @@ const interactive = null;
 //     Wit = require('../').Wit;
 //     interactive = require('../').interactive;
 // } 
-catch (e) {
-    Wit = require('botSample').Wit;
-    interactive = require('node-wit').interactive;
-}
+// catch (e) {
+//     Wit = require('botSample').Wit;
+//     interactive = require('node-wit').interactive;
+// }
 
 // Wit quckstart - Does this conflict?
-// const accessToken = (() => {
-//     if (process.argv.length !== 3) {
-//         console.log('usage: node examples/quickstart.js ZEGOKEEGU5FC7QML32OLBHCCS3PQHYUU');
-//         process.exit(1);
-//     }
-//     return process.argv[2];
-// })();
+const accessToken = (() => {
+    if (process.argv.length !== 3) {
+        console.log('usage: node examples/quickstart.js ZEGOKEEGU5FC7QML32OLBHCCS3PQHYUU');
+        process.exit(1);
+    }
+    return process.argv[2];
+})();
 
 // index
 app.get('/', function (req, res) {
