@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Wit quickstart
-// let Wit = null;
-// let interactive = null;
+const Wit = null;
+const interactive = null;
 // try {
 //     // if running from repo
 //     Wit = require('../').Wit;
