@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Wit quickstart
-let Wit = null;
-let interactive = null;
+// let Wit = null;
+// let interactive = null;
 // try {
 //     // if running from repo
 //     Wit = require('../').Wit;
@@ -146,8 +146,8 @@ function sendGenericMessage(sender) {
 	})
 }
 // From Wit quickstart
-const client = new Wit({ accessToken, actions });
-interactive(client);
+// const client = new Wit({ accessToken, actions });
+// interactive(client);
 
 // spin spin sugar
 app.listen(app.get('port'), function() {
