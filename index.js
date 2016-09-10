@@ -149,8 +149,8 @@ function sendGenericMessage(sender) {
 	})
 }
 // From Wit quickstart - heroku doesn't like either
-const client = new Wit({ accessToken, actions });
-interactive(client);
+// const client = new Wit({ accessToken, actions });
+// interactive(client);
 
 // spin spin sugar
 app.listen(app.get('port'), function() {
