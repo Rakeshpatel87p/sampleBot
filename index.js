@@ -21,10 +21,11 @@ const interactive = null;
 //     // if running from repo
 //     Wit = require('../').Wit;
 //     interactive = require('../').interactive;
-// } catch (e) {
-//     Wit = require('botSample').Wit;
-//     interactive = require('node-wit').interactive;
-// }
+// } 
+catch (e) {
+    Wit = require('botSample').Wit;
+    interactive = require('node-wit').interactive;
+}
 
 // Wit quckstart - Does this conflict?
 // const accessToken = (() => {
